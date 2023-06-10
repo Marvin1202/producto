@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+<body style="display: flex;">
+<div style="border: solid; width: 450px; justify-content: center; margin-top: 3%; margin-left: 15%;" >
+  <div class="w-25 m-5" >
+  <form class="needs-validation" novalidate style="">
+    
+   <div style="margin: 15px;">
+    <label for="codigo">Codigo:</label>
+    <input style="width: 300px;" type="text" id="codigo" name="codigo" required>
+    <div class="valid-feedback">
+      Correcto
+    </div>
+    <div class="invalid-feedback">
+      Es necesario introducir codigo correcto
+    </div>
+   </div>
+
+  <div style="margin: 15px;">
+    <label for="descripcion">Descripción:</label>
+    <input style="width: 300px;" type="text" id="descripcion" name="descripcio" required>
+    <div class="valid-feedback">
+      Correcto
+    </div>
+    <div class="invalid-feedback">
+      Es necesario introducir descripción
+    </div>
+  </div>
+    
+    
+    <div style="margin: 15px;">
+    <label for="codigo de barra">Codigo de barra:</label>
+    <input style="width: 300px;" type="text" id="codigo de barra" name="codigo de barra" required>
+    <div class="valid-feedback">
+      Correcto
+    </div>
+    <div class="invalid-feedback">
+      Es necesario introducir codigo de barra
+    </div>
+  </div>
+
+    <div style="margin: 15px;">
+    <label for="precio unitario">Precio unitario</label>
+    <input style="width: 300px;" type="text" id="precio unitario" name="precio unitario" required>
+    <div class="valid-feedback">
+      Correcto
+    </div>
+    <div class="invalid-feedback">
+      Es necesario introducir precio unitario
+    </div>
+  </div>
+
+
+   <div style="margin: 15px;">
+    <label for="stock">Stock</label>
+    <input style="width: 300px;" type="text" id="stock" name="stock" required>
+    <div class="valid-feedback">
+      Correcto
+    </div>
+    <div class="invalid-feedback">
+      Es necesario introducir stock
+    </div>
+  </div>
+
+
+   <div style="margin: 15px;">
+    <label for="proveedor">proveedor</label>
+    <input style="width: 300px;" type="text" id="proveedor" name="proveedor" required>
+    <div class="valid-feedback">
+      Correcto
+    </div>
+    <div class="invalid-feedback">
+      Es necesario introducir proveedor
+    </div>
+    </div>
+    
+    <div style="margin: 15px;">
+    <label for="estado">Estado</label>
+    <input type="checkbox" name="estado" id="estado" required>
+    <div class="valid-feedback">
+      Correcto
+    </div>
+    <div class="invalid-feedback">
+      Es necesario seleccionar el checkbox
+    </div>
+  </div>
+
+    
+<div style="margin: 15px;">
+    <label for="categoria">Categoría</label>
+    <select class="categorias">
+      <option value="categoria1">Categoria 1</option>
+      <option value="categoria2">Categoria 2</option>
+      <option value="categoria3">Categoria 3</option>
+      <option value="categoria4">Categoria 4</option>
+    </select required>
+    <div class="valid-feedback">
+      Correcto
+    </div>
+    <div class="invalid-feedback">
+      Es necesario seleccionar categoria
+    </div>
+  </div>
+
+  <div>
+    <button type="submit" class="btn btn-primary" style="margin-top: 15px; margin-left: 10px;">Guardar</button>
+  </div>
+  
+  <div style="margin-left: 250px; margin-top: -50px;">
+    <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Cancelar</button>
+  </div>
+
+  </form>
+</div>
+</div>
+
+<script>
+  (() => {
+  'use strict'
+
+ 
+  const forms = document.querySelectorAll('.needs-validation')
+
+  
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+</script>
+  
+</body>
+</html>
